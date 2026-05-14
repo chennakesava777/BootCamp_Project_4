@@ -1,0 +1,34 @@
+{
+  "queryset": {
+    "version": "1.0.0",
+    "dataSources": [
+      {
+        "id": "5a547846-8863-4863-8da4-44aac83ba9bf",
+        "clusterUri": "https://trd-gtnvz20723g8dh3w9s.z5.kusto.fabric.microsoft.com",
+        "type": "Fabric",
+        "databaseItemId": "45dc28db-c467-4ac2-acc6-d20fc779d7fe",
+        "databaseItemName": "StreamLakehouse"
+      }
+    ],
+    "tabs": [
+      {
+        "id": "31792079-8d90-456b-bb6d-d1dcadf3069a",
+        "content": "//***********************************************************************************************************\n// Here are two articles to help you get started with KQL:\n// KQL reference guide - https://aka.ms/KQLguide\n// SQL - KQL conversions - https://aka.ms/sqlcheatsheet\n//***********************************************************************************************************\n\n// Use \"take\" to view a sample number of records in the table and check the data.\nYOUR_TABLE_HERE\n| take 100\n\n// See how many records are in the table.\nYOUR_TABLE_HERE\n| count\n\n// This query returns the number of ingestions per hour in the given table.\nYOUR_TABLE_HERE\n| summarize IngestionCount = count() by bin(ingestion_time(), 1h)\n\n",
+        "title": "Tab",
+        "dataSourceId": "5a547846-8863-4863-8da4-44aac83ba9bf"
+      },
+      {
+        "id": "243b96ab-0de3-41e8-8f5d-92ee394e4bd7",
+        "content": "-- View a sample of 100 records in the table.\nselect top 100 * from customers_schema_v1\n\nselect * from customers_schema_v1 \nwhere city = 'New York'",
+        "title": "",
+        "dataSourceId": "5a547846-8863-4863-8da4-44aac83ba9bf"
+      },
+      {
+        "id": "9a024973-8cfc-4216-9168-398cf3d859b1",
+        "content": "-- View a sample of 100 records in the table.\nselect top 100 * from customers_schema_v1\n",
+        "title": "",
+        "dataSourceId": "5a547846-8863-4863-8da4-44aac83ba9bf"
+      }
+    ]
+  }
+}

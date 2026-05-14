@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Notebook",
+    "displayName": "Bronze Notebook for FactTransactions"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "e3a36a16-e7cd-aa19-43eb-3fc637eab77b"
+  }
+}

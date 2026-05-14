@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "EventSchemaSet",
+    "displayName": "Banking_Data_Schema"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "fa8053ef-0e22-9031-4dba-aaf1e7eb6212"
+  }
+}

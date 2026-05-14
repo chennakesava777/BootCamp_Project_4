@@ -1,0 +1,67 @@
+{
+  "sources": [
+    {
+      "id": "120b287f-c47f-4fd3-aeec-b93edded3427",
+      "name": "Orders-EventHub",
+      "type": "AzureEventHub",
+      "properties": {
+        "dataConnectionId": "ca6f815c-a3fd-4db8-801e-f35f742aaa0b",
+        "consumerGroupName": "$Default",
+        "inputSerialization": {
+          "type": "Json",
+          "properties": {
+            "encoding": "UTF8"
+          }
+        }
+      }
+    }
+  ],
+  "destinations": [
+    {
+      "id": "d9396757-70ac-46a2-8582-37a25184ea6d",
+      "name": "Eventhouse",
+      "type": "Eventhouse",
+      "properties": {
+        "dataIngestionMode": "ProcessedIngestion",
+        "workspaceId": "00000000-0000-0000-0000-000000000000",
+        "itemId": "c779d7fe-d20f-acc6-4ac2-c46745dc28db",
+        "databaseName": "StreamLakehouse",
+        "tableName": "Orders",
+        "inputSerialization": {
+          "type": "Json",
+          "properties": {
+            "encoding": "UTF8"
+          }
+        }
+      },
+      "inputNodes": [
+        {
+          "name": "Orders_Streaming-stream"
+        }
+      ],
+      "inputSchemas": [
+        {
+          "name": "Orders_Streaming-stream",
+          "schema": {
+            "columns": []
+          }
+        }
+      ]
+    }
+  ],
+  "streams": [
+    {
+      "id": "e933e5a3-b9c1-4b29-9fa6-b47efa52ae38",
+      "name": "Orders_Streaming-stream",
+      "type": "DefaultStream",
+      "properties": {},
+      "inputNodes": [
+        {
+          "name": "Orders-EventHub"
+        }
+      ]
+    }
+  ],
+  "operators": [],
+  "compatibilityLevel": "1.1"
+}

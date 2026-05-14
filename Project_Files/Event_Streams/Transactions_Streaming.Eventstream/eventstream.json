@@ -1,0 +1,67 @@
+{
+  "sources": [
+    {
+      "id": "871921df-0258-4c30-b1bc-34a33655cea4",
+      "name": "Transactions-EventHub",
+      "type": "AzureEventHub",
+      "properties": {
+        "dataConnectionId": "77b2bcce-67eb-4b66-ac52-7ded2c50d80c",
+        "consumerGroupName": "$Default",
+        "inputSerialization": {
+          "type": "Json",
+          "properties": {
+            "encoding": "UTF8"
+          }
+        }
+      }
+    }
+  ],
+  "destinations": [
+    {
+      "id": "d5a7dc1f-bf0a-4954-ae76-d9173fe258fe",
+      "name": "Eventhouse",
+      "type": "Eventhouse",
+      "properties": {
+        "dataIngestionMode": "ProcessedIngestion",
+        "workspaceId": "00000000-0000-0000-0000-000000000000",
+        "itemId": "c779d7fe-d20f-acc6-4ac2-c46745dc28db",
+        "databaseName": "StreamLakehouse",
+        "tableName": "transactions",
+        "inputSerialization": {
+          "type": "Json",
+          "properties": {
+            "encoding": "UTF8"
+          }
+        }
+      },
+      "inputNodes": [
+        {
+          "name": "Transactions_Streaming-stream"
+        }
+      ],
+      "inputSchemas": [
+        {
+          "name": "Transactions_Streaming-stream",
+          "schema": {
+            "columns": []
+          }
+        }
+      ]
+    }
+  ],
+  "streams": [
+    {
+      "id": "e928f11e-a765-445b-b688-b65e655f37d9",
+      "name": "Transactions_Streaming-stream",
+      "type": "DefaultStream",
+      "properties": {},
+      "inputNodes": [
+        {
+          "name": "Transactions-EventHub"
+        }
+      ]
+    }
+  ],
+  "operators": [],
+  "compatibilityLevel": "1.1"
+}
