@@ -1,0 +1,62 @@
+{
+  "sources": [
+    {
+      "id": "d457fc69-0d29-4f9f-963b-46ebaa9a9a1c",
+      "name": "customers-event-hub",
+      "type": "AzureEventHubExtended",
+      "properties": {
+        "dataConnectionId": "3ff61e68-2b7d-4103-9305-2f12de22f14f",
+        "consumerGroupName": "$Default",
+        "startPosition": "Earliest"
+      }
+    }
+  ],
+  "destinations": [
+    {
+      "id": "6aa2a4c0-067e-4831-b7e3-978adaf1e761",
+      "name": "Eventhouse1",
+      "type": "Eventhouse",
+      "properties": {
+        "dataIngestionMode": "ProcessedIngestion",
+        "workspaceId": "00000000-0000-0000-0000-000000000000",
+        "itemId": "c779d7fe-d20f-acc6-4ac2-c46745dc28db",
+        "databaseName": "StreamLakehouse",
+        "tableName": "{CloudEventType}_{CloudEventSchemaVersion}",
+        "inputSerialization": {
+          "type": "Json",
+          "properties": {
+            "encoding": "UTF8"
+          }
+        }
+      },
+      "inputNodes": [
+        {
+          "name": "eventStreamTemps-stream"
+        }
+      ],
+      "inputSchemas": [
+        {
+          "name": "eventStreamTemps-stream",
+          "schema": {
+            "columns": []
+          }
+        }
+      ]
+    }
+  ],
+  "streams": [
+    {
+      "id": "5d648fa3-58a1-422d-896b-31a87e5004f4",
+      "name": "eventStreamTemps-stream",
+      "type": "DefaultStream",
+      "properties": {},
+      "inputNodes": [
+        {
+          "name": "customers-event-hub"
+        }
+      ]
+    }
+  ],
+  "operators": [],
+  "compatibilityLevel": "1.1"
+}

@@ -1,0 +1,128 @@
+{
+  "eventTypes": [
+    {
+      "id": "customers_schema",
+      "description": "",
+      "format": "CloudEvents/1.0",
+      "envelopeMetadata": {
+        "id": {
+          "type": "string",
+          "required": true
+        },
+        "type": {
+          "type": "string",
+          "required": true,
+          "value": "customers_schema"
+        },
+        "source": {
+          "type": "string",
+          "required": true,
+          "value": "/workspaces/e6c63ae4-2a13-432b-88da-942625116c8a/items/e7eb6212-aaf1-4dba-9031-0e22fa8053ef"
+        },
+        "specversion": {
+          "type": "string",
+          "required": true
+        },
+        "dataschema": {
+          "type": "string",
+          "required": true,
+          "value": "https://rthprodyt42098665.canadacentral.messagingcatalog.azure.net/schemagroups/e7eb6212-aaf1-4dba-9031-0e22fa8053ef/schemas/customers_schema/versions/v1"
+        }
+      },
+      "schemaUrl": "#/schemas/customers_schema",
+      "schemaFormat": "Avro/1.12.0",
+      "protocol": "",
+      "protocolOptions": {}
+    },
+    {
+      "id": "Orders_Schema",
+      "description": "",
+      "format": "CloudEvents/1.0",
+      "envelopeMetadata": {
+        "id": {
+          "type": "string",
+          "required": true
+        },
+        "type": {
+          "type": "string",
+          "required": true,
+          "value": "Orders_Schema"
+        },
+        "source": {
+          "type": "string",
+          "required": true
+        },
+        "specversion": {
+          "type": "string",
+          "required": true
+        }
+      },
+      "schemaUrl": "#/schemas/Orders_Schema",
+      "schemaFormat": "Avro/1.12.0"
+    },
+    {
+      "id": "Transactions_Schema",
+      "description": "",
+      "format": "CloudEvents/1.0",
+      "envelopeMetadata": {
+        "id": {
+          "type": "string",
+          "required": true
+        },
+        "type": {
+          "type": "string",
+          "required": true,
+          "value": "Transactions_Schema"
+        },
+        "source": {
+          "type": "string",
+          "required": true
+        },
+        "specversion": {
+          "type": "string",
+          "required": true
+        }
+      },
+      "schemaUrl": "#/schemas/Transactions_Schema",
+      "schemaFormat": "Avro/1.12.0"
+    }
+  ],
+  "schemas": [
+    {
+      "id": "customers_schema",
+      "format": "Avro/1.12.0",
+      "versions": [
+        {
+          "id": "v1",
+          "format": "Avro/1.12.0",
+          "schema": "{\n \"fields\": [\n  {\n   \"name\": \"Customer_id\",\n   \"type\": \"string\"\n  },\n  {\n   \"name\": \"Name\",\n   \"type\": \"string\"\n  },\n  {\n   \"name\": \"Email\",\n   \"type\": \"string\"\n  },\n  {\n   \"name\": \"City\",\n   \"type\": \"string\"\n  },\n  {\n   \"name\": \"Created_at\",\n   \"type\": \"string\"\n  }\n ],\n \"type\": \"record\",\n \"name\": \"customers_schema\"\n}",
+          "ancestor": "v1"
+        }
+      ]
+    },
+    {
+      "id": "Orders_Schema",
+      "format": "Avro/1.12.0",
+      "versions": [
+        {
+          "id": "v1",
+          "format": "Avro/1.12.0",
+          "schema": "{\n \"fields\": [\n  {\n   \"name\": \"order_id\",\n   \"type\": \"string\"\n  },\n  {\n   \"name\": \"customer_id\",\n   \"type\": \"string\"\n  },\n  {\n   \"name\": \"product\",\n   \"type\": \"string\"\n  },\n  {\n   \"name\": \"quantity\",\n   \"type\": \"int\"\n  },\n  {\n   \"name\": \"price\",\n   \"type\": \"double\"\n  },\n  {\n   \"name\": \"order_timestamp\",\n   \"type\": \"string\"\n  }\n ],\n \"type\": \"record\",\n \"name\": \"Orders_Schema\"\n}",
+          "ancestor": "v1"
+        }
+      ]
+    },
+    {
+      "id": "Transactions_Schema",
+      "format": "Avro/1.12.0",
+      "versions": [
+        {
+          "id": "v1",
+          "format": "Avro/1.12.0",
+          "schema": "{\n \"fields\": [\n  {\n   \"name\": \"transaction_id\",\n   \"type\": \"string\"\n  },\n  {\n   \"name\": \"order_id\",\n   \"type\": \"string\"\n  },\n  {\n   \"name\": \"payment_method\",\n   \"type\": \"string\"\n  },\n  {\n   \"name\": \"transaction_amount\",\n   \"type\": \"double\"\n  },\n  {\n   \"name\": \"transaction_status\",\n   \"type\": \"string\"\n  },\n  {\n   \"name\": \"transaction_timestamp\",\n   \"type\": \"string\"\n  }\n ],\n \"type\": \"record\",\n \"name\": \"Transactions_Schema\"\n}",
+          "ancestor": "v1"
+        }
+      ]
+    }
+  ]
+}

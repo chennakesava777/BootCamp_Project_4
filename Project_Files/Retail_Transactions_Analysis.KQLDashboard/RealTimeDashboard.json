@@ -1,0 +1,326 @@
+{
+  "schema_version": 74,
+  "tiles": [
+    {
+      "id": "ed959020-928c-491e-9346-c47c4f992731",
+      "title": "Customers count by each city",
+      "visualType": "column",
+      "pageId": "0f6513ea-a66e-4a18-88bb-ec0caeb756c4",
+      "layout": {
+        "x": 0,
+        "y": 0,
+        "width": 9,
+        "height": 7
+      },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "9caead0b-9183-48ca-bcd4-6d9720104d92"
+      },
+      "visualOptions": {
+        "multipleYAxes": {
+          "base": {
+            "id": "-1",
+            "label": "",
+            "columns": [],
+            "yAxisMaximumValue": null,
+            "yAxisMinimumValue": null,
+            "yAxisScale": "linear",
+            "horizontalLines": []
+          },
+          "additional": [],
+          "showMultiplePanels": false
+        },
+        "seriesColors": {
+          "CustomerCount": "color--(24)"
+        },
+        "hideLegend": false,
+        "legendLocation": "bottom",
+        "xColumnTitle": "",
+        "xColumn": null,
+        "yColumns": null,
+        "seriesColumns": null,
+        "xAxisScale": "linear",
+        "verticalLine": "",
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "forceAxisTicks": false,
+        "crossFilter": [],
+        "drillthrough": []
+      }
+    },
+    {
+      "id": "413f65e7-9a40-4394-beda-6c3073210897",
+      "title": "Total Orders in Last one day",
+      "visualType": "card",
+      "pageId": "0f6513ea-a66e-4a18-88bb-ec0caeb756c4",
+      "layout": {
+        "x": 9,
+        "y": 0,
+        "width": 5,
+        "height": 3
+      },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "1980e581-0a1b-4fa7-b8ff-4fc5ec4138f7"
+      },
+      "visualOptions": {
+        "multiStat__textSize": "auto",
+        "multiStat__valueColumn": null,
+        "colorRulesDisabled": false,
+        "colorRules": []
+      }
+    },
+    {
+      "id": "0f781861-18bc-44e9-b46c-4142c06b5020",
+      "title": "Products sold in last one hour",
+      "visualType": "bar",
+      "pageId": "0f6513ea-a66e-4a18-88bb-ec0caeb756c4",
+      "layout": {
+        "x": 14,
+        "y": 0,
+        "width": 9,
+        "height": 7
+      },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "a77c30c1-5b3a-43e0-98a5-ac76c7be7fd4"
+      },
+      "visualOptions": {
+        "multipleYAxes": {
+          "base": {
+            "id": "-1",
+            "label": "",
+            "columns": [],
+            "yAxisMaximumValue": null,
+            "yAxisMinimumValue": null,
+            "yAxisScale": "linear",
+            "horizontalLines": []
+          },
+          "additional": [],
+          "showMultiplePanels": false
+        },
+        "seriesColors": {
+          "OrderCount": "color--(9)"
+        },
+        "hideLegend": false,
+        "legendLocation": "bottom",
+        "xColumnTitle": "Product Type",
+        "xColumn": null,
+        "yColumns": null,
+        "seriesColumns": null,
+        "xAxisScale": "linear",
+        "verticalLine": "",
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "forceAxisTicks": false,
+        "crossFilter": [],
+        "drillthrough": []
+      }
+    },
+    {
+      "id": "01cd0bcd-b7ef-4963-9900-6b010cb5db47",
+      "title": "Transactions status in last 1 hour",
+      "visualType": "table",
+      "pageId": "0f6513ea-a66e-4a18-88bb-ec0caeb756c4",
+      "layout": {
+        "x": 0,
+        "y": 7,
+        "width": 8,
+        "height": 7
+      },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "caf40416-b79a-47ac-9ae0-e3e437e568c9"
+      },
+      "visualOptions": {
+        "table__enableRenderLinks": true,
+        "colorRulesDisabled": true,
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "crossFilter": [],
+        "drillthrough": [],
+        "table__renderLinks": [],
+        "colorRules": []
+      }
+    },
+    {
+      "id": "97074d9b-eaab-4bbc-a747-b25cde8f6cc2",
+      "title": "Payment Type for transactions",
+      "visualType": "pie",
+      "pageId": "0f6513ea-a66e-4a18-88bb-ec0caeb756c4",
+      "layout": {
+        "x": 8,
+        "y": 7,
+        "width": 7,
+        "height": 7
+      },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "ff99096e-0958-4d83-a9e0-142709f5cc3f"
+      },
+      "visualOptions": {
+        "hideLegend": false,
+        "legendLocation": "bottom",
+        "xColumn": null,
+        "yColumns": null,
+        "seriesColumns": null,
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "labelDisabled": false,
+        "pie__label": [
+          "name",
+          "percentage"
+        ],
+        "tooltipDisabled": false,
+        "pie__tooltip": [
+          "name",
+          "percentage",
+          "value"
+        ],
+        "pie__orderBy": "size",
+        "pie__kind": "pie",
+        "pie__topNSlices": null,
+        "seriesColors": {},
+        "crossFilter": [],
+        "drillthrough": []
+      }
+    },
+    {
+      "id": "058f04bb-d9d0-46a1-8cf9-f950f85a9293",
+      "title": "Revenue change in last 1 hour for every five minutes",
+      "visualType": "timechart",
+      "pageId": "0f6513ea-a66e-4a18-88bb-ec0caeb756c4",
+      "layout": {
+        "x": 15,
+        "y": 7,
+        "width": 9,
+        "height": 7
+      },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "1bf4e5e0-f826-407a-85d0-01e18848a935"
+      },
+      "visualOptions": {
+        "multipleYAxes": {
+          "base": {
+            "id": "-1",
+            "label": "",
+            "columns": [],
+            "yAxisMaximumValue": null,
+            "yAxisMinimumValue": null,
+            "yAxisScale": "linear",
+            "horizontalLines": []
+          },
+          "additional": [],
+          "showMultiplePanels": false
+        },
+        "seriesColors": {},
+        "hideLegend": false,
+        "legendLocation": "bottom",
+        "xColumnTitle": "",
+        "xColumn": null,
+        "yColumns": null,
+        "seriesColumns": null,
+        "xAxisScale": "linear",
+        "verticalLine": "",
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "forceAxisTicks": false,
+        "crossFilter": [],
+        "drillthrough": []
+      }
+    }
+  ],
+  "baseQueries": [],
+  "parameters": [
+    {
+      "kind": "duration",
+      "id": "40bbdc76-4974-4ccd-a7f3-af1bc3f2f46d",
+      "displayName": "Time range",
+      "description": "",
+      "beginVariableName": "_startTime",
+      "endVariableName": "_endTime",
+      "defaultValue": {
+        "kind": "dynamic",
+        "count": 1,
+        "unit": "hours"
+      },
+      "showOnPages": {
+        "kind": "all"
+      }
+    }
+  ],
+  "dataSources": [
+    {
+      "id": "7ca3158f-bcab-4c89-8fd5-9f98fb9bf973",
+      "kind": "kusto-trident",
+      "clusterUri": "",
+      "databaseArtifactId": "45dc28db-c467-4ac2-acc6-d20fc779d7fe",
+      "database": "c779d7fe-d20f-acc6-4ac2-c46745dc28db",
+      "workspace": "00000000-0000-0000-0000-000000000000",
+      "name": "StreamLakehouse"
+    }
+  ],
+  "pages": [
+    {
+      "name": "Page 1",
+      "id": "0f6513ea-a66e-4a18-88bb-ec0caeb756c4"
+    }
+  ],
+  "queries": [
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "7ca3158f-bcab-4c89-8fd5-9f98fb9bf973"
+      },
+      "text": "customers_schema_v1\r\n| summarize CustomerCount = count() by City\r\n| order by CustomerCount desc",
+      "id": "9caead0b-9183-48ca-bcd4-6d9720104d92",
+      "usedVariables": []
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "7ca3158f-bcab-4c89-8fd5-9f98fb9bf973"
+      },
+      "text": "\r\nOrders\r\n| extend IngestTime = ingestion_time()\r\n| where IngestTime > ago(1d)\r\n| summarize TotalOrders = count()\r\n\r\n\r\n",
+      "id": "1980e581-0a1b-4fa7-b8ff-4fc5ec4138f7",
+      "usedVariables": []
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "7ca3158f-bcab-4c89-8fd5-9f98fb9bf973"
+      },
+      "text": "Orders\r\n|extend ingest_time = ingestion_time()\r\n| where ingest_time > ago(1d)\r\n| summarize OrderCount = count() by product\r\n| order by OrderCount desc",
+      "id": "a77c30c1-5b3a-43e0-98a5-ac76c7be7fd4",
+      "usedVariables": []
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "7ca3158f-bcab-4c89-8fd5-9f98fb9bf973"
+      },
+      "text": "transactions\r\n| extend ingestion_time = ingestion_time()\r\n| where ingestion_time > ago(1h)\r\n| summarize\r\n    Total = count(),\r\n    Success = countif(transaction_status == \"SUCCESS\"),\r\n    Failed = countif(transaction_status == \"FAILED\"),\r\n    SuccessRate = 100.0 * countif(transaction_status == \"SUCCESS\") / count()",
+      "id": "caf40416-b79a-47ac-9ae0-e3e437e568c9",
+      "usedVariables": []
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "7ca3158f-bcab-4c89-8fd5-9f98fb9bf973"
+      },
+      "text": "transactions\r\n| extend ingestion_time = ingestion_time()\r\n| where ingestion_time > ago(1d)\r\n| summarize Count = count() by payment_method\r\n| order by Count desc",
+      "id": "ff99096e-0958-4d83-a9e0-142709f5cc3f",
+      "usedVariables": []
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "7ca3158f-bcab-4c89-8fd5-9f98fb9bf973"
+      },
+      "text": "transactions\r\n| extend ingestion_time = ingestion_time()\r\n| where ingestion_time > ago(1d)\r\n| summarize Amount = sum(transaction_amount) by bin(ingestion_time, 30m)\r\n| order by ingestion_time asc",
+      "id": "1bf4e5e0-f826-407a-85d0-01e18848a935",
+      "usedVariables": []
+    }
+  ]
+}

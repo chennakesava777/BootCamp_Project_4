@@ -1,0 +1,12 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "KQLDashboard",
+    "displayName": "Retail_Transactions_Analysis",
+    "description": "Retail_Transactions_Analysis"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "a9bbd58e-4585-88d1-4dc8-fe93f4ac0ed6"
+  }
+}
