@@ -28,6 +28,12 @@
         "content": "-- View a sample of 100 records in the table.\nselect top 100 * from customers_schema_v1\n",
         "title": "",
         "dataSourceId": "5a547846-8863-4863-8da4-44aac83ba9bf"
+      },
+      {
+        "id": "8dd9f51e-0e18-43f9-9ca3-4d9952f4897d",
+        "content": "// Use 'take' to view a sample number of records in the table and check the data.\nOrders\n| take 100\n\n-- View a sample of 100 records in the table.\nselect top 100 * from customers_schema_v1\nwhere city = 'Vancouver'\n",
+        "title": "",
+        "dataSourceId": "5a547846-8863-4863-8da4-44aac83ba9bf"
       }
     ]
   }
